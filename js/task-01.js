@@ -5,8 +5,8 @@ const numberOfCategories = document.querySelectorAll(".item")
 
 const mainFn = function (array) {
 
-    const test1 = array.length;
-    console.log(`Number of categories: ${test1}`)
+    const totalNumOfCategories = array.length;
+    console.log(`Number of categories: ${totalNumOfCategories}`)
 
     array.forEach((item) => {
 

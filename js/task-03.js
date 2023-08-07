@@ -14,20 +14,21 @@ const images = [
 ];
 
 
-const list = document.querySelector(".gallery")
+const list = document.querySelector(".gallery");
 
 const addImg = function (array) {
 
-array.forEach( item => {
-  
-  list.insertAdjacentHTML("afterbegin", `<li><img src = "${item.url}" alt = "${item.alt}" width = 500  ></img></li>`);
-  
-});
+  let addImgString = "";
 
-}
+  array.forEach(item => {
+  
+    addImgString += `<li><img src = "${item.url}" alt = "${item.alt}" width = 500  ></img></li>`;
+  
+  });
+  
+  list.insertAdjacentHTML("afterbegin", addImgString);
+};
   
 addImg(images);
   
 // list.insertAdjacentHTML("afterbegin", `<h2 class = "${images[0].url}" alt = "${images[0].alt}">Popular technologies</h2>`)
-
-console.log(list);
